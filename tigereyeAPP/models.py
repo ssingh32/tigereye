@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 class Events(models.Model):
@@ -11,3 +10,8 @@ class Events(models.Model):
     category = models.CharField(max_length=100)
     event_image = models.CharField(max_length=1000)
 
+    def __str__(self):
+        return self.name + ' at ' + self.location
+
+    class Meta:
+        verbose_name_plural = 'events'
