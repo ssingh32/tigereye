@@ -1,9 +1,10 @@
 from django.db import models
+from datetime import datetime
 # Create your models here.
 
 class Events(models.Model):
-    start_time = models.DateTimeField
-    end_time = models.DateTimeField
+    start_time = models.DateTimeField(default=datetime.now)
+    end_time = models.DateTimeField(default=datetime.now)
     location = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
