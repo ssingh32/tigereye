@@ -26,7 +26,7 @@ class SocialAreas(models.Model):
     area_image = models.CharField(max_length=1000)
 
     def __str__(self):
-        return self.name + ' near ' + self.location
+        return self.name + ' at ' + self.location
 
     class Meta:
-        verbose_name_plural = 'social areas'
+        verbose_name_plural = 'social Areas'
