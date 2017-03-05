@@ -16,3 +16,17 @@ class Events(models.Model):
 
     class Meta:
         verbose_name_plural = 'events'
+
+class SocialAreas(models.Model):
+    name = models.CharField(max_length=100)
+    location = models.CharField(max_length=100)
+    open_time = models.DateTimeField(default=datetime.now)
+    close_time = models.DateTimeField(default=datetime.now)
+    description = models.CharField(max_length=500)
+    area_image = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return self.name + ' near ' + self.location
+
+    class Meta:
+        verbose_name_plural = 'social areas'
