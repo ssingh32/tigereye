@@ -1,3 +1,7 @@
+<!-- Loads the path to the static files -->
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/bootstrap.css' %}" />
+
 {% if all_events  %}
     <h1>All Events:</h1>
     <ul>
