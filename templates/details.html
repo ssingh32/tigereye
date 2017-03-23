@@ -1,7 +1,8 @@
-<img src = "{{ event.event_image }}">
-
 <h1>{{ event.name }}</h1>
-
+<img src = "{{ event.event_image }}">
+<h3>Description: {{ event.description }}</h3>
 <ul>
-    <li></li>
+    <li>Location: {{ event.location }}</li>
+    <li>Date: {{ event.start_time|date}}</li>
+    <li>Time: {{ event.start_time|time}} - {{ event.end_time|time }}</li>
 </ul>
