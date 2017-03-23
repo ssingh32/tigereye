@@ -1,6 +1,5 @@
 from django.http import HttpResponse
-from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from . models import Events
 
 def index(request):
@@ -10,10 +9,7 @@ def index(request):
 
 
 def detail(request, events_id):
-    try:
-        event = Events.objects.get(pk=events_id)
-    except Events.DoesNotExist:
-        raise Http404("Event does not exist")
+    event = get_object_or_404(Events, pk=events_id)
     return render(request, 'details.html', {'event' : event})
 
 
