@@ -16,7 +16,7 @@ html {
 body {
     width: 100%;
     height: 100%;
-    padding-top: 75px;
+    padding-top: 60px;
 }
 
 .dropdown-menu {
@@ -31,6 +31,7 @@ body {
     font-size: 20px;
     background-color: #E1810D;
     border-bottom: 5px solid #000000;
+    margin-bottom: 0px;
 }
 
 #headerNav a {
@@ -192,4 +193,103 @@ body {
 /* TODO probably better to not apply this globally to h1 elements*/
 #page h1 {
     text-align: center;
+}
+
+/* Makes it where the table rows do not have borders */
+.table tbody tr td, .table tbody tr th {
+    border: none;
+}
+
+.row {
+    height: 100%;
+}
+
+/* Styles for the Events to be displayed */
+#event{
+    height: 100%;
+} 
+
+#events {
+    height: 100%;
+}
+#event-table-div {
+    height: 100%;
+    font-size: 12px;
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+#events-table {
+    width: 75%;
+}
+
+#event {
+    padding: 0px;
+}
+
+#event-image {
+    padding-top: 50%;
+    padding-bottom: 50%;
+}
+
+/* Styles for the Clubs to be displayed */
+#club{
+    height: 100%;
+} 
+
+#clubs {
+    height: 100%;
+}
+#club-table-div {
+    height: 100%;
+    font-size: 12px;
+    padding-top: 10%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+#clubs-table {
+    width: 75%;
+}
+
+#club {
+    padding: 0px;
+}
+
+#club-image {
+    padding-top: 50%;
+    padding-bottom: 50%;
+}
+
+/* Styles for the Social Areas to be displayed */
+#social {
+    height: 100%;
+} 
+
+#social-areas {
+    height: 100%;
+}
+#social-table-div {
+    height: 100%;
+    font-size: 12px;
+    padding-top: 10%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+#social-table {
+    width: 75%;
+}
+
+#social-area {
+    padding: 0px;
+}
+
+#social-image {
+    padding-top: 50%;
+    padding-bottom: 50%;
 }

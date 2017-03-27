@@ -1,11 +1,11 @@
--- Grab from events table
+-- GET from events table
 SELECT DISTINCT * 
 FROM Events
 
--- Grab from clubs table
+-- GGET from clubs table
 SELECT DISTINCT * 
 FROM Clubs
 
--- Grab from social areas table
+-- GET from social areas table
 SELECT DISTINCT * 
 FROM SocialAreas
