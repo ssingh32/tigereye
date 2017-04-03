@@ -200,10 +200,6 @@ body {
     border: none;
 }
 
-.row {
-    height: 100%;
-}
-
 /* Styles for the Events to be displayed */
 #event{
     height: 100%;
@@ -212,10 +208,10 @@ body {
 #events {
     height: 100%;
 }
-#event-table-div {
+#event-info-div {
     height: 100%;
     font-size: 12px;
-    padding-top: 20px;
+    padding-top: 10%;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -242,10 +238,10 @@ body {
 #clubs {
     height: 100%;
 }
-#club-table-div {
+#club-info-div {
     height: 100%;
     font-size: 12px;
-    padding-top: 10%;
+    padding-top: 15%;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -272,10 +268,10 @@ body {
 #social-areas {
     height: 100%;
 }
-#social-table-div {
+#social-info-div {
     height: 100%;
     font-size: 12px;
-    padding-top: 10%;
+    padding-top: 15%;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
