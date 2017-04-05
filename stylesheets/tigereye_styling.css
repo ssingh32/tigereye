@@ -193,15 +193,15 @@ body {
     border-bottom: 3px solid #e6e6e6;
     width: 100%;
     height: auto;
+    min-height: 33%;
+    padding-bottom: 25px;
 }
 
 #event{
     height: 100%;
+    padding: 0px;
 } 
 
-#events {
-    height: 100%;
-}
 #event-info-div {
     height: 100%;
     font-size: 12px;
@@ -215,10 +215,6 @@ body {
     width: 75%;
 }
 
-#event {
-    padding: 0px;
-}
-
 #event-image {
     padding-top: 50%;
     padding-bottom: 50%;
@@ -229,10 +225,13 @@ body {
     border-bottom: 3px solid #e6e6e6;
     width: 100%;
     height: auto;
+    min-height: 33%;
+    padding-bottom: 25px;
 }
 
 #club{
     height: 100%;
+    padding: 0px;
 } 
 
 #clubs {
@@ -251,10 +250,6 @@ body {
     width: 75%;
 }
 
-#club {
-    padding: 0px;
-}
-
 #club-image {
     padding-top: 50%;
     padding-bottom: 50%;
@@ -265,10 +260,13 @@ body {
     border-bottom: 3px solid #e6e6e6;
     width: 100%;
     height: auto;
+    min-height: 33%;
+    padding-bottom: 25px;
 }
 
-#social {
+#social-area {
     height: 100%;
+    padding: 0px;
 } 
 
 #social-areas {
@@ -285,10 +283,6 @@ body {
 
 #social-table {
     width: 75%;
-}
-
-#social-area {
-    padding: 0px;
 }
 
 #social-image {
