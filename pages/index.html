@@ -1,54 +1,54 @@
 <!doctype html>
 <html>
-	<head>
-	<title>TigerEye</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="../stylesheets/bootstrap.css"/>
-		<link rel="stylesheet" href="../stylesheets/tigereye_styling.css"/>
-		<link rel="shortcut icon" href=""/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="../js/bootstrap.js"></script>
-		<script src="../js/tigereye.js"></script>
-	</head>
+    <head>
+    <title>TigerEye</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../stylesheets/bootstrap.css"/>
+        <link rel="stylesheet" href="../stylesheets/tigereye_styling.css"/>
+        <link rel="shortcut icon" href=""/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <script src="../js/tigereye.js"></script>
+    </head>
     <body>
         <!-- navigation bar -->
-		<nav id="headerNav" class="navbar navbar-default navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a href ="#" id="headerNav" class="navbar-brand">TigerEye</a>
-					<button id="small-window-menu" class="navbar-toggle" data-toggle="collapse" data-target=".nav-data-collapsed" class="navbar-toggle collapsed">Menu <span class="caret"></span>
-					</button>
-				</div>
-				<div class="collapse navbar-collapse nav-data-collapsed" style="height:auto">
+        <nav id="headerNav" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href ="#" id="headerNav" class="navbar-brand">TigerEye</a>
+                    <button id="small-window-menu" class="navbar-toggle" data-toggle="collapse" data-target=".nav-data-collapsed" class="navbar-toggle collapsed">Menu <span class="caret"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse nav-data-collapsed" style="height:auto">
                     <!--TODO do this better so its not a workaround to get login to float all the way right first-->
 
                     <!--Login/Signup-->
                     <ul id="login" class="nav navbar-nav">
-						<li><a href="#">Login/Signup</a></li>
-					</ul>
+                        <li><a href="#">Login/Signup</a></li>
+                    </ul>
 
                     <!--Search-->
                     <ul id="search" class="nav navbar-nav">
-						<button type="button" class="btn btn-primary btn-sm" id="search-button"><span class="glyphicon glyphicon-search"></span> Search</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="search-button"><span class="glyphicon glyphicon-search"></span> Search</button>
                         <div class="form-group" id="search-form">
                             <input type="" class="form-control" id="" placeholder="" name="search">
-						</div>
-					</ul>
+                        </div>
+                    </ul>
 
                     <!--dropdown for the filter-->
                     <ul id="filter" class="nav navbar-nav">
-						<li class="dropdown">
+                        <li class="dropdown">
                             <button type="button" class="btn btn-primary btn-sm" class="dropdown-toggle" data-toggle="dropdown" id="filter-button" >Filter <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                                 <li id="filter-element">Sports</li>
                                 <li id="filter-element">Free</li>
                             </ul>
-					    </li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
         <!--Start of main page-->
         <div id="page" class="container-fluid col-md-12">
@@ -56,7 +56,7 @@
             <!-- Events Div -->
             <div id="events-div" class="container-fluid col-md-12">
                 <!--<h4>Events</h4>-->
-				<!--<div id="events" class="row">-->
+                <!--<div id="events" class="row">-->
                         <div id="event" class="col-md-4">
                             <div id="image-div" class="col-md-4">
                                 <img id="event-image" src="../assets/blank_image.png" class="img-responsive">
@@ -95,82 +95,14 @@
                             </div>
                         <!--</div>-->
                     </div>
-                <button class="btn btn-primary btn-sm" id="see-more-events" onclick="">See More Events<span class="caret"></button>
             </div>
             <!-- Clubs Div -->
             <div id="clubs-div" class="container-fluid col-md-12">
                 <!--<h4>Clubs</h4>-->
-                <!--<div id="clubs" class="row">-->
-
-                    <div id="club" class="col-md-4">
-                        <div id="image-div" class="col-md-4">
-                            <img id="club-image" src="../assets/blank_image.png" class="img-responsive">
-                        </div>
-                        <div id="club-info-div" class="col-md-8">
-                            <p>Test</p>
-                            <p>Chambers 113</p>
-                            <p>$0</p>
-                        </div>
-                    </div>
-                    <div id="club" class="col-md-4">
-                        <div id="image-div" class="col-md-4">
-                            <img id="club-image" src="../assets/blank_image.png" class="img-responsive">
-                        </div>
-                        <div id="club-info-div" class="col-md-8">
-                            <p>Test</p>
-                            <p>Chambers 113</p>
-                            <p>$0</p>
-                        </div>
-                    </div>
-                    <div id="club" class="col-md-4">
-                        <div id="image-div" class="col-md-4">
-                            <img id="club-image" src="../assets/blank_image.png" class="img-responsive">
-                        </div>
-                        <div id="club-info-div" class="col-md-8">
-                            <p>Test</p>
-                            <p>Chambers 113</p>
-                            <p>$0</p>
-                        </div>
-                    </div>
-				<!--</div>-->
-                <button class="btn btn-primary btn-sm" id="see-more-clubs" onclick="">See More Clubs<span class="caret"></button>
             </div>
             <!-- Social Areas Div -->
             <div id="social-areas-div" class="container-fluid col-md-12">
                 <!--<h4>Social Areas</h4>-->
-                <!--<div id="social-areas" class="row">-->
-                    <div id="social-area" class="col-md-4">
-                        <div id="image-div" class="col-md-4">
-                            <img id="social-image" src="../assets/blank_image.png" class="img-responsive">
-                        </div>
-                        <div id="social-info-div" class="col-md-8">
-                            <p>Test</p>
-                            <p>Chambers 113</p>
-                            <p>$0</p>
-                        </div>
-                    </div>
-                    <div id="social-area" class="col-md-4">
-                        <div id="image-div" class="col-md-4">
-                            <img id="social-image" src="../assets/blank_image.png" class="img-responsive">
-                        </div>
-                        <div id="social-info-div" class="col-md-8">
-                            <p>Test</p>
-                            <p>Chambers 113</p>
-                            <p>$0</p>
-                        </div>
-                    </div>
-                    <div id="social-area" class="col-md-4">
-                        <div id="image-div" class="col-md-4">
-                            <img id="social-image" src="../assets/blank_image.png" class="img-responsive">
-                        </div>
-                        <div id="social-info-div" class="col-md-8">
-                            <p>Test</p>
-                            <p>Chambers 113</p>
-                            <p>$0</p>
-                        </div>
-                    </div>
-				<!--</div>-->
-                <button class="btn btn-primary btn-sm" id="see-more-social" onclick="">See More Social Areas<span class="caret"></button>
             </div>
         </div>
         <!--<div class="push"></div></div>
