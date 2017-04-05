@@ -4,7 +4,7 @@
 
 $(document).ready(function () {
     // see more events button
-    $("#see-more-events").click(function() {
+    $(document.body).on("click", "#see-more-events", function() {
         $("#events-div").empty();
         $.getJSON('/php/get_event_data.php', function(events) {
             $.each(events, function (key, val) {
@@ -13,7 +13,7 @@ $(document).ready(function () {
                 var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
                 var event_info = '<div id="event-info-div" class="col-md-8"><p>' +
                     val.Name + '</p><p>' + val.Location +
-                    '</p><p>' + val.Date + '</p><p>' +
+                    '</p><p>' + val.EventDate + '</p><p>' +
                     val.EventStart + '-' + val.EventEnd +
                     '</p><p>' + val.Cost + '</p></div>'
                 var end_row = '</div>'
@@ -33,7 +33,7 @@ $(document).ready(function () {
                 var row = '<div id="clubs" class="row">'
                 var club_start = '<div id="club" class="col-md-4">'
                 var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
-                var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.location + '</p><p>' + val.Cost + '</p></div>'
+                var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
                 var end_row = '</div>'
 
                 // add the element to the clubs div
@@ -51,7 +51,7 @@ $(document).ready(function () {
                 var row = '<div id="social-areas" class="row">'
                 var social_start = '<div id="social-area" class="col-md-4">'
                 var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
-                var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.location + '</p><p>' + val.Cost + '</p></div>'
+                var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
                 var end_row = '</div>'
 
                 // add the element to the social areas div
@@ -99,7 +99,7 @@ function display_3_events() {
             var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
             var event_info = '<div id="event-info-div" class="col-md-8"><p>' +
                 val.Name + '</p><p>' + val.Location +
-                '</p><p>' + val.Date + '</p><p>' +
+                '</p><p>' + val.EventDate + '</p><p>' +
                 val.EventStart + '-' + val.EventEnd +
                 '</p><p>' + val.Cost + '</p></div>'
             var end_row = '</div>'
@@ -123,7 +123,7 @@ function display_3_clubs() {
             var row = '<div id="clubs" class="row">'
             var club_start = '<div id="club" class="col-md-4">'
             var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
-            var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.location + '</p><p>' + val.Cost + '</p></div>'
+            var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
             var end_row = '</div>'
 
             // add the element to the clubs div
@@ -145,7 +145,7 @@ function display_3_social() {
             var row = '<div id="social-areas" class="row">'
             var social_start = '<div id="social-area" class="col-md-4">'
             var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
-            var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.location + '</p><p>' + val.Cost + '</p></div>'
+            var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
             var end_row = '</div>'
 
             // add the element to the social areas div
