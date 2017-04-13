@@ -55,13 +55,42 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Modal Header</h4>
                         </div>
                         <div class="modal-body">
-                            <p>Some text in the modal.</p>
+                            <div class="form-group">
+                                <label>Name:</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label>Location:</label>
+                                <input type="text" class="form-control" id="location">
+                            </div>
+                            <div class="form-group">
+                                <label>Date:</label>
+                                <input type="text" class="form-control" id="date">
+                            </div>
+                            <div class="form-group">
+                                <label>Start Time:</label>
+                                <input type="text" class="form-control" id="t_start">
+                            </div>
+                            <div class="form-group">
+                                <label>End Time:</label>
+                                <input type="text" class="form-control" id="t_end">
+                            </div>
+                            <div class="form-group">
+                                <label>Cost:</label>
+                                <input type="text" class="form-control" id="cost">
+                            </div>
+                            <div class="form-group">
+                                <label for="comment">Description:</label>
+                                <textarea class="form-control" rows="5" id="description"></textarea>
+                            </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <label id="image_upload" class="btn btn-default" for="my-file-selector" style="float: left;">
+                                <input id="my-file-selector" type="file">
+                            </label>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Submit Event</button>
                         </div>
                     </div>
                 </div>
