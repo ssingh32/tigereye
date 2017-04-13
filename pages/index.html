@@ -4,10 +4,11 @@
 	<title>TigerEye</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<link rel="stylesheet" href="../stylesheets/bootstrap.css"/>
 		<link rel="stylesheet" href="../stylesheets/tigereye_styling.css"/>
 		<link rel="shortcut icon" href=""/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
 		<script src="../js/bootstrap.js"></script>
 		<script src="../js/tigereye.js"></script>
 	</head>
@@ -17,15 +18,14 @@
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a href ="index.html" id="headerNav" class="navbar-brand">TigerEye</a>
-					<button id="small-window-menu" class="navbar-toggle" data-toggle="collapse" data-target=".nav-data-collapsed" class="navbar-toggle collapsed">Menu <span class="caret"></span>
-					</button>
+					<button id="small-window-menu" class="navbar-toggle" data-toggle="collapse" data-target=".nav-data-collapsed" class="navbar-toggle collapsed">Menu <span class="caret"></span></button>
 				</div>
 				<div class="collapse navbar-collapse nav-data-collapsed" style="height:auto">
                     <!--TODO do this better so its not a workaround to get login to float all the way right first-->
 
                     <!--Login/Signup-->
                     <ul id="login" class="nav navbar-nav">
-						<li><a href="login_page.html">Login/Signup</a></li>
+						<li><a href="login_page.html">Login/Signup <span class="glyphicon glyphicon-log-in"></span></a></li>
 					</ul>
 
                     <!--Search-->
@@ -37,14 +37,10 @@
 					</ul>
 
                     <!--dropdown for the filter-->
-                    <ul id="filter" class="nav navbar-nav">
-						<li class="dropdown">
-                            <button type="button" class="btn btn-primary btn-sm" class="dropdown-toggle" data-toggle="dropdown" id="filter-button" >Filter <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                                <li id="filter-element">Sports</li>
-                                <li id="filter-element">Free</li>
-                            </ul>
-					    </li>
+                    <ul id="add-event" class="nav navbar-nav">
+
+                            <button type="button" class="btn btn-primary btn-sm" id="modal-button" data-toggle="modal" data-target="#add-event-modal">Add Event <span class="glyphicon glyphicon-plus"></span></button>
+
 					</ul>
 				</div>
 			</div>
@@ -52,6 +48,24 @@
 
         <!--Start of main page-->
         <div id="page" class="container-fluid col-md-12">
+            <!-- Modal -->
+            <div id="add-event-modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Some text in the modal.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Events Div -->
             <div id="events-div" class="container-fluid col-md-12">

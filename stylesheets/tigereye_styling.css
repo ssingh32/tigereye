@@ -80,12 +80,12 @@ body {
     color: rgba(0,0,0,0.5);
 }
 
-#filter {
+#add-event {
     padding-top: 9px; 
     float: right;
 }
 
-#filter-button {
+#modal-button {
     padding-top: 8px;
     font-size: 14px;
     color: #000000;
@@ -93,12 +93,8 @@ body {
     border: 0px;
 }
 
-#filter-button:hover {
+#modal-button:hover {
     color: rgba(0,0,0,0.5);
-}
-
-#filter-element:hover {
-    background-color: #E1810D;
 }
 
 #page {
