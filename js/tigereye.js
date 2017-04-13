@@ -22,7 +22,7 @@ $(document).ready(function () {
                 $('#events-div').append(event_start + image + event_info);
             });
         });
-        $("#events-div").append('<button class="btn btn-primary btn-sm" id="see-less-events" onclick="">See Less Events<span class="dropup"><span class="caret"></span></button>');
+        $("#events-div").append('<button class="btn btn-primary btn-sm" id="see-less-events" onclick="">See Fewer Events<span class="dropup"><span class="caret"></span></button>');
     });
 
     // see more clubs button
@@ -40,7 +40,7 @@ $(document).ready(function () {
                 $('#clubs-div').append(club_start + image + club_info);
             });
         });
-        $("#clubs-div").append('<button class="btn btn-primary btn-sm" id="see-less-clubs" onclick="">See Less Clubs<span class="dropup"><span class="caret"></span></button>');
+        $("#clubs-div").append('<button class="btn btn-primary btn-sm" id="see-less-clubs" onclick="">See Fewer Clubs<span class="dropup"><span class="caret"></span></button>');
     });
 
     // see more social button
@@ -58,7 +58,7 @@ $(document).ready(function () {
                 $('#social-areas-div').append(social_start + image + social_info);
             });
         });
-        $("#social-areas-div").append('<button class="btn btn-primary btn-sm" id="see-less-social" onclick="">See Less Social Areas<span class="dropup"><span class="caret"></span></button>');
+        $("#social-areas-div").append('<button class="btn btn-primary btn-sm" id="see-less-social" onclick="">See Fewer Social Areas<span class="dropup"><span class="caret"></span></button>');
     });
 
     // see less events button
