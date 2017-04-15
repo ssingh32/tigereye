@@ -87,7 +87,32 @@ $(window).on("load", function() {
     display_3_events();
     display_3_clubs();
     display_3_social();
+
+    // TODO do some user session so this generates the correct navbar 
+    // logged_in_nav();
+    not_logged_in_nav();
 });
+
+// generate the navbar when not logged in
+function not_logged_in_nav() {
+    var login_button = '<li><a href="login_page.html">Login/Signup <span class="glyphicon glyphicon-log-in"></span></a></li>'
+    var add_event_button = '<button type="button" class="btn btn-primary btn-sm" id="modal-button" data-toggle="modal" data-target="#add-event-modal">Add Event <span class="glyphicon glyphicon-plus"></span></button>'
+    $('#login').append(login_button);
+    $('#add-event').append(add_event_button);
+}
+
+// generate the navbar when logged in
+function logged_in_nav() {
+    var logout_button = '<li><a href="#">Signout <span class="glyphicon glyphicon-log-out"></span></a></li>'
+    var add_event_button = '<button type="button" class="btn btn-primary btn-sm" id="modal-button" data-toggle="modal" data-target="#add-event-modal">Add Event <span class="glyphicon glyphicon-plus"></span></button>'
+    $('#login').append(logout_button);
+    $('#add-event').append(add_event_button);
+}
+
+// TODO signout when the button is pressed
+function sign_out() {
+    console.log("Now signing out");
+}
 
 // build the events div array with the first 3 entries
 function display_3_events() {

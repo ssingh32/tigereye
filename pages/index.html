@@ -26,13 +26,9 @@
                     <button id="small-window-menu" class="navbar-toggle" data-toggle="collapse" data-target=".nav-data-collapsed" class="navbar-toggle collapsed">Menu <span class="caret"></span></button>
                 </div>
                 <div class="collapse navbar-collapse nav-data-collapsed" style="height:auto">
-                    <!--TODO do this better so its not a workaround to get login to float all the way right first-->
-
+                    <!--TODO do this better so its not a workaround to get login to float all the way right first?-->
                     <!--Login/Signup-->
-                    <ul id="login" class="nav navbar-nav">
-                        <li><a href="login_page.html">Login/Signup <span class="glyphicon glyphicon-log-in"></span></a></li>
-                    </ul>
-
+                    <ul id="login" class="nav navbar-nav"></ul>
                     <!--Search-->
                     <ul id="search" class="nav navbar-nav">
                         <button type="button" class="btn btn-primary btn-sm" id="search-button"><span class="glyphicon glyphicon-search"></span> Search</button>
@@ -40,80 +36,80 @@
                             <input type="" class="form-control" id="" placeholder="" name="search">
                         </div>
                     </ul>
-
-                    <!--dropdown for the filter-->
-                    <ul id="add-event" class="nav navbar-nav">
-                        <button type="button" class="btn btn-primary btn-sm" id="modal-button" data-toggle="modal" data-target="#add-event-modal">Add Event <span class="glyphicon glyphicon-plus"></span></button>
-                    </ul>
+                    <!-- add event button -->
+                    <ul id="add-event" class="nav navbar-nav"></ul>
                 </div>
             </div>
         </nav>
 
         <!--Start of main page-->
         <div id="page" class="container-fluid col-md-12">
+            
             <!-- Modal -->
             <div id="add-event-modal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
                     <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Name:</label>
-                                <input type="text" class="form-control" id="name">
+                    <form action="../php/event_add.php" id="event-add-form" method="post">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
                             </div>
-                            <div class="form-group">
-                                <label>Location:</label>
-                                <input type="text" class="form-control" id="location">
-                            </div>
-                            <!--Start Date/time selector-->
-                            <div class="form-group">
-                                <label>Start Date/Time:</label>
-                                <div class='input-group date' id='datetimepicker1'>
-                                    <input type='text' class="form-control" id="t_start"/>
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Name:</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Location:</label>
+                                    <input type="text" class="form-control" id="location">
+                                </div>
+                                <!--Start Date/time selector-->
+                                <div class="form-group">
+                                    <label>Start Date/Time:</label>
+                                    <div class='input-group date' id='datetimepickerStart'>
+                                        <input type='text' class="form-control" id="t_start"/>
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('#datetimepickerStart').datetimepicker();
+                                    });
+                                </script>
+                                <!--End Date/time selector-->
+                                <div class="form-group">
+                                    <label>End Date/Time:</label>
+                                    <div class='input-group date' id='datetimepickerEnd'>
+                                        <input type='text' class="form-control" id="t_end"/>
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('#datetimepickerEnd').datetimepicker();
+                                    });
+                                </script>
+                                <div class="form-group">
+                                    <label>Cost:</label>
+                                    <input type="text" class="form-control" id="cost">
+                                </div>
+                                <div class="form-group">
+                                    <label for="comment">Description:</label>
+                                    <textarea class="form-control" rows="5" id="description"></textarea>
                                 </div>
                             </div>
-                            <script type="text/javascript">
-                                $(function () {
-                                    $('#datetimepicker1').datetimepicker();
-                                });
-                            </script>
-                            <!--End Date/time selector-->
-                            <div class="form-group">
-                                <label>End Date/Time:</label>
-                                <div class='input-group date' id='datetimepicker2'>
-                                    <input type='text' class="form-control" id="t_end"/>
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
-                                </div>
-                            </div>
-                            <script type="text/javascript">
-                                $(function () {
-                                    $('#datetimepicker2').datetimepicker();
-                                });
-                            </script>
-                            <div class="form-group">
-                                <label>Cost:</label>
-                                <input type="text" class="form-control" id="cost">
-                            </div>
-                            <div class="form-group">
-                                <label for="comment">Description:</label>
-                                <textarea class="form-control" rows="5" id="description"></textarea>
+                            <div class="modal-footer">
+                                <label id="image_upload" class="btn btn-default" for="my-file-selector" style="float: left;">
+                                    <input id="my-file-selector" type="file">
+                                </label>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Submit Event</button>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <label id="image_upload" class="btn btn-default" for="my-file-selector" style="float: left;">
-                                <input id="my-file-selector" type="file">
-                            </label>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Submit Event</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
 
