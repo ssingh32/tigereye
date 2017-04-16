@@ -13,19 +13,24 @@ $(document).ready(function () {
     $(document.body).on("click", "#see-more-events", function() {
         $("#events-div").empty();
         $.getJSON('/php/get_event_data.php', function(events) {
+            var counter = 0;
             $.each(events, function (key, val) {
                 var row = '<div id="events" class="row">'
-                var event_start = '<a href="details.html"><div id="event" class="col-md-4">'
+                var event_start = '<div data-toggle="modal" data-target="#event-details' + counter + '"><div id="event" class="col-md-4">'
                 var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="' + val.Image + '" class="img-responsive"></div>'
                 var event_info = '<div id="event-info-div" class="col-md-8"><p>' +
                     val.Name + '</p><p>' + val.Location +
                     '</p><p>' +
                     val.EventStart + '</p><p>' + val.EventEnd +
                     '</p><p>' + val.Cost + '</p></div>'
-                var end_row = '</div></a>'
+                var end_row = '</div></div>'
+
+                var modal = '<div id="event-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+ val.Name +'</h4></div><div class="modal-body"><p>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
+
 
                 // add the element to the events div
-                $('#events-div').append(event_start + image + event_info);
+                $('#events-div').append(event_start + image + event_info + modal);
+                counter++;
             });
         });
         $("#events-div").append('<button class="btn btn-primary btn-sm" id="see-less-events" onclick="">See Fewer Events<span class="dropup"><span class="caret"></span></button>');
@@ -35,15 +40,19 @@ $(document).ready(function () {
     $(document.body).on("click", "#see-more-clubs", function() {
         $("#clubs-div").empty();
         $.getJSON('/php/get_club_data.php', function(clubs) {
+            var counter = 0;
             $.each(clubs, function (key, val) {
                 var row = '<div id="clubs" class="row">'
-                var club_start = '<a href="details.html"><div id="club" class="col-md-4">'
+                var club_start = '<div data-toggle="modal" data-target="#club-details' + counter + '"><div id="club" class="col-md-4">'
                 var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
                 var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
-                var end_row = '</div></a>'
+                var end_row = '</div></div>'
+
+                var modal = '<div id="club-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+ val.Name +'</h4></div><div class="modal-body"><p>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
 
                 // add the element to the clubs div
-                $('#clubs-div').append(club_start + image + club_info);
+                $('#clubs-div').append(club_start + image + club_info + modal);
+                counter++;
             });
         });
         $("#clubs-div").append('<button class="btn btn-primary btn-sm" id="see-less-clubs" onclick="">See Fewer Clubs<span class="dropup"><span class="caret"></span></button>');
@@ -53,15 +62,19 @@ $(document).ready(function () {
     $(document.body).on("click", "#see-more-social",function() {
         $("#social-areas-div").empty();
         $.getJSON('/php/get_social_data.php', function(social) {
+            var counter = 0;
             $.each(social, function (key, val) {
                 var row = '<div id="social-areas" class="row">'
-                var social_start = '<a href="details.html"><div id="social-area" class="col-md-4">'
+                var social_start = '<div data-toggle="modal" data-target="#social-details' + counter + '"><div id="social-area" class="col-md-4">'
                 var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
                 var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
-                var end_row = '</div></a>'
+                var end_row = '</div></div>'
+
+                var modal = '<div id="social-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+ val.Name +'</h4></div><div class="modal-body"><p>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
 
                 // add the element to the social areas div
-                $('#social-areas-div').append(social_start + image + social_info);
+                $('#social-areas-div').append(social_start + image + social_info + modal);
+                counter++;
             });
         });
         $("#social-areas-div").append('<button class="btn btn-primary btn-sm" id="see-less-social" onclick="">See Fewer Social Areas<span class="dropup"><span class="caret"></span></button>');
@@ -126,17 +139,20 @@ function display_3_events() {
         var counter = 0;
         $.each(events, function (key, val) {
             var row = '<div id="events" class="row">'
-            var event_start = '<a href="details.html"><div id="event" class="col-md-4">'
+            var event_start = '<div data-toggle="modal" data-target="#event-details' + counter + '"><div id="event" class="col-md-4">'
             var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="' + val.Image + '" class="img-responsive"></div>'
             var event_info = '<div id="event-info-div" class="col-md-8"><p>' +
                 val.Name + '</p><p>' + val.Location +
                 '</p><p>' +
                 val.EventStart + '</p><p>' + val.EventEnd +
                 '</p><p>' + val.Cost + '</p></div>'
-            var end_row = '</div></a>'
+            var end_row = '</div></div>'
+
+            var modal = '<div id="event-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+ val.Name +'</h4></div><div class="modal-body"><p>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
+
 
             // add the element to the events div
-            $('#events-div').append(event_start + image + event_info);
+            $('#events-div').append(event_start + image + event_info + modal);
 
             // only displays the first 3 items from the db unless see more is pressed
             counter++;
@@ -152,13 +168,15 @@ function display_3_clubs() {
         var counter = 0;
         $.each(clubs, function (key, val) {
             var row = '<div id="clubs" class="row">'
-            var club_start = '<a href="details.html"><div id="club" class="col-md-4">'
+            var club_start = '<div data-toggle="modal" data-target="#club-details' + counter + '"><div id="club" class="col-md-4">'
             var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
             var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
-            var end_row = '</div></a>'
+            var end_row = '</div></div>'
+
+            var modal = '<div id="club-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+ val.Name +'</h4></div><div class="modal-body"><p>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
 
             // add the element to the clubs div
-            $('#clubs-div').append(club_start + image + club_info);
+            $('#clubs-div').append(club_start + image + club_info + modal);
 
             // only displays the first 3 items from the db unless see more is pressed
             counter++;
@@ -174,13 +192,15 @@ function display_3_social() {
         var counter = 0;
         $.each(social, function (key, val) {
             var row = '<div id="social-areas" class="row">'
-            var social_start = '<a href="details.html"><div id="social-area" class="col-md-4">'
+            var social_start = '<div data-toggle="modal" data-target="#social-details' + counter + '"><div id="social-area" class="col-md-4">'
             var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
             var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
-            var end_row = '</div></a>'
+            var end_row = '</div></div>'
+
+            var modal = '<div id="social-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+ val.Name +'</h4></div><div class="modal-body"><p>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
 
             // add the element to the social areas div
-            $('#social-areas-div').append(social_start + image + social_info);
+            $('#social-areas-div').append(social_start + image + social_info + modal);
 
             // only displays the first 3 items from the db unless see more is pressed
             counter++;

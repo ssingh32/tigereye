@@ -1,5 +1,7 @@
 <?php
 
+// to get the permissions correct, run <unix> htdocs chmod -R 777 TigerEyeTest/
+
 include_once("tigereyeDB.php");
 
 if(isset($_POST['name'])
