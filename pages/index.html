@@ -49,67 +49,69 @@
             <div id="add-event-modal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
                     <!-- Modal content-->
-                    <form action="../php/event_add.php" id="event-add-form" method="post">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                             </div>
                             <div class="modal-body">
-                                <div class="form-group">
-                                    <label>Name:</label>
-                                    <input type="text" class="form-control" id="name">
-                                </div>
-                                <div class="form-group">
-                                    <label>Location:</label>
-                                    <input type="text" class="form-control" id="location">
-                                </div>
-                                <!--Start Date/time selector-->
-                                <div class="form-group">
-                                    <label>Start Date/Time:</label>
-                                    <div class='input-group date' id='datetimepickerStart'>
-                                        <input type='text' class="form-control" id="t_start"/>
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-calendar"></span>
-                                            </span>
+                                <form enctype="multipart/form-data" action="../php/add_event.php" id="event-add-form" method="post">
+                                    <div class="form-group">
+                                        <label>Name:</label>
+                                        <input type="text" class="form-control" id="name" name="name"/>
                                     </div>
-                                </div>
-                                <script type="text/javascript">
-                                    $(function () {
-                                        $('#datetimepickerStart').datetimepicker();
-                                    });
-                                </script>
-                                <!--End Date/time selector-->
-                                <div class="form-group">
-                                    <label>End Date/Time:</label>
-                                    <div class='input-group date' id='datetimepickerEnd'>
-                                        <input type='text' class="form-control" id="t_end"/>
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-calendar"></span>
-                                            </span>
+                                    <div class="form-group">
+                                        <label>Location:</label>
+                                        <input type="text" class="form-control" id="location" name="location">
                                     </div>
-                                </div>
-                                <script type="text/javascript">
-                                    $(function () {
-                                        $('#datetimepickerEnd').datetimepicker();
-                                    });
-                                </script>
-                                <div class="form-group">
-                                    <label>Cost:</label>
-                                    <input type="text" class="form-control" id="cost">
-                                </div>
-                                <div class="form-group">
-                                    <label for="comment">Description:</label>
-                                    <textarea class="form-control" rows="5" id="description"></textarea>
-                                </div>
+                                    <!--Start Date/time selector-->
+                                    <div class="form-group">
+                                        <label>Start Date/Time:</label>
+                                        <div class='input-group date' id='datetimepickerStart'>
+                                            <input type='text' class="form-control" id="t_start" name="start"/>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                        </div>
+                                    </div>
+                                    <script type="text/javascript">
+                                        $(function () {
+                                            $('#datetimepickerStart').datetimepicker();
+                                        });
+                                    </script>
+                                    <!--End Date/time selector-->
+                                    <div class="form-group">
+                                        <label>End Date/Time:</label>
+                                        <div class='input-group date' id='datetimepickerEnd'>
+                                            <input type='text' class="form-control" id="t_end" name="end"/>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                        </div>
+                                    </div>
+                                    <script type="text/javascript">
+                                        $(function () {
+                                            $('#datetimepickerEnd').datetimepicker();
+                                        });
+                                    </script>
+                                    <div class="form-group">
+                                        <label>Cost:</label>
+                                        <input type="" class="form-control" id="cost" name="cost">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="comment">Description:</label>
+                                        <textarea class="form-control" rows="5" id="description" name="description"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="image_upload" class="btn btn-default" for="my-file-selector" style="float: left;">
+                                            <input id="my-file-selector" type="file" name="image"/>
+                                        </label>
+                                    </div>
+                                </form>
                             </div>
                             <div class="modal-footer">
-                                <label id="image_upload" class="btn btn-default" for="my-file-selector" style="float: left;">
-                                    <input id="my-file-selector" type="file">
-                                </label>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Submit Event</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal" id="add-event-button">Submit Event</button>
                             </div>
                         </div>
-                    </form>
                 </div>
             </div>
 

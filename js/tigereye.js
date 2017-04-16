@@ -3,6 +3,12 @@
 */
 
 $(document).ready(function () {
+
+    // add event button, add event to the database
+    $(document.body).on("click", "#add-event-button", function() {
+        document.getElementById("event-add-form").submit();
+    });
+
     // see more events button
     $(document.body).on("click", "#see-more-events", function() {
         $("#events-div").empty();
@@ -13,8 +19,8 @@ $(document).ready(function () {
                 var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
                 var event_info = '<div id="event-info-div" class="col-md-8"><p>' +
                     val.Name + '</p><p>' + val.Location +
-                    '</p><p>' + val.EventDate + '</p><p>' +
-                    val.EventStart + '-' + val.EventEnd +
+                    '</p><p>' +
+                    val.EventStart + '</p><p>' + val.EventEnd +
                     '</p><p>' + val.Cost + '</p></div>'
                 var end_row = '</div></a>'
 
@@ -124,8 +130,8 @@ function display_3_events() {
             var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
             var event_info = '<div id="event-info-div" class="col-md-8"><p>' +
                 val.Name + '</p><p>' + val.Location +
-                '</p><p>' + val.EventDate + '</p><p>' +
-                val.EventStart + '-' + val.EventEnd +
+                '</p><p>' +
+                val.EventStart + '</p><p>' + val.EventEnd +
                 '</p><p>' + val.Cost + '</p></div>'
             var end_row = '</div></a>'
 

@@ -8,11 +8,10 @@ CREATE TABLE Events
 (
 UID 					INTEGER			ZEROFILL PRIMARY KEY AUTO_INCREMENT,
 Name					VARCHAR(17)		NOT NULL,
-Image                   BLOB            NOT NULL,
-Description				TEXT					,
+Image                   TEXT            NOT NULL,
 Location                TEXT            NOT NULL,
-EventDate               DATE                    ,
-EventStart              TIME                    ,
-EventEnd                TIME                    ,
-Cost                    INTEGER         NOT NULL	
+EventStart              TEXT                    ,
+EventEnd                TEXT                    ,
+Cost                    INTEGER         NOT NULL,
+Description				TEXT					
 );
