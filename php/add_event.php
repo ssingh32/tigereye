@@ -27,7 +27,9 @@ if(isset($_POST['name'])
 
     // echo $uploaddir;
     // echo "\r\n;";
-    // echo $uploadfile;
+    echo $_FILES['image']['tmp_name'];
+
+    move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
 
     $values = "'".$_POST['name']."','".$uploadfile."','".$_POST['location']."','";
     $values = $values.$_POST['start']."','".$_POST['end']."',";
@@ -44,7 +46,7 @@ if(isset($_POST['name'])
     // echo "\r\n;";
     $query->execute();
 
-    //header("Location:../pages/index.html");
+    header("Location:../pages/index.html");
 }
 
 

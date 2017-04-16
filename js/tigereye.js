@@ -16,7 +16,7 @@ $(document).ready(function () {
             $.each(events, function (key, val) {
                 var row = '<div id="events" class="row">'
                 var event_start = '<a href="details.html"><div id="event" class="col-md-4">'
-                var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
+                var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="' + val.Image + '" class="img-responsive"></div>'
                 var event_info = '<div id="event-info-div" class="col-md-8"><p>' +
                     val.Name + '</p><p>' + val.Location +
                     '</p><p>' +
@@ -127,7 +127,7 @@ function display_3_events() {
         $.each(events, function (key, val) {
             var row = '<div id="events" class="row">'
             var event_start = '<a href="details.html"><div id="event" class="col-md-4">'
-            var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
+            var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="' + val.Image + '" class="img-responsive"></div>'
             var event_info = '<div id="event-info-div" class="col-md-8"><p>' +
                 val.Name + '</p><p>' + val.Location +
                 '</p><p>' +
