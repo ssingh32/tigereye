@@ -3,7 +3,6 @@
 */
 
 $(document).ready(function () {
-
     // add event button, add event to the database
     $(document.body).on("click", "#add-event-button", function() {
         document.getElementById("event-add-form").submit();
@@ -13,9 +12,10 @@ $(document).ready(function () {
     $(document.body).on("click", "#create-account-button", function() {
         if(document.getElementById("signup-form").elements.item(2).value == document.getElementById("signup-form").elements.item(3).value) {
             document.getElementById("signup-form").submit();
+            sessionStorage.setItem("username", document.getElementById("signup-form").elements.item(0).value)
         }
         else {
-            var error = '<div class="alert alert-danger" id="password-error"><strong>Passwords did not match!<br></strong>Please re-enter your passwords</div>';
+            var error ='<div class="alert alert-danger fade in" id="password-error"><strong>Passwords did not match!<br></strong>Please re-enter your password</div>';
             $('#signup-div').append(error);
             return false;
         }
@@ -113,37 +113,52 @@ $(document).ready(function () {
 
 
 // On page load, the first 3 database contents are inserted into the corresponding
-// rows by getting the JSON data from each table in the DB
+// rows by getting the JSON data from each table in the DB, also the timeout is set
+// for a user that is logged in
 $(window).on("load", function() {
+    timeout;
     display_3_events();
     display_3_clubs();
     display_3_social();
 
-    // TODO do some user session so this generates the correct navbar 
-    // logged_in_nav();
-    not_logged_in_nav();
+    // Generate the correct navbar based on if an account is signed in or not
+    if (sessionStorage.getItem("username") == null) {
+        not_logged_in_nav();
+    }
+    else {
+        logged_in_nav();
+    }
 });
 
-// generate the navbar when not logged in
+// generate the navbar when user is not logged in
 function not_logged_in_nav() {
     var login_button = '<li><a href="login_page.html">Login/Signup <span class="glyphicon glyphicon-log-in"></span></a></li>'
-    var add_event_button = '<button type="button" class="btn btn-primary btn-sm" id="modal-button" data-toggle="modal" data-target="#add-event-modal">Add Event <span class="glyphicon glyphicon-plus"></span></button>'
     $('#login').append(login_button);
-    $('#add-event').append(add_event_button);
 }
 
-// generate the navbar when logged in
+// generate the navbar when user is logged in
 function logged_in_nav() {
-    var logout_button = '<li><a href="#">Signout <span class="glyphicon glyphicon-log-out"></span></a></li>'
+    var logout_button = '<li><a href="#" onclick="sign_out()">Signout <span class="glyphicon glyphicon-log-out"></span></a></li>'
     var add_event_button = '<button type="button" class="btn btn-primary btn-sm" id="modal-button" data-toggle="modal" data-target="#add-event-modal">Add Event <span class="glyphicon glyphicon-plus"></span></button>'
     $('#login').append(logout_button);
     $('#add-event').append(add_event_button);
 }
 
-// TODO signout when the button is pressed
+// Sign out the user when the button is pressed and reloads the page
 function sign_out() {
-    console.log("Now signing out");
+    sessionStorage.clear();
+    location.reload();
 }
+
+// Sign in the user TODO
+function sign_in() {
+    pass;
+}
+
+// Timeout user at 3 mins
+var timeout = setTimeout(function(){
+    sessionStorage.clear();
+    }, 180000);
 
 // build the events div array with the first 3 entries
 function display_3_events() {
