@@ -9,7 +9,7 @@
 		<link rel="shortcut icon" href=""/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="../js/bootstrap.js"></script>
-		<!--<script src="js/tigereye.js"></script>-->
+		<script src="../js/tigereye.js"></script>
 
         <!-- TODO finish google sign in stuff-->
         <!--<meta name="google-signin-scope" content="profile email">
@@ -53,24 +53,24 @@
             <!--signup side-->
             <div id="signup-div" class="container-fluid col-md-6">
                 <h1>Signup</h1>
-                <form id="signup-form" method="post">
+                <form action="../php/create_user.php" id="signup-form" method="post">
                     <div class="form-group">
 						<label for="">Name:</label>
-						<input type="" class="form-control" id="" placeholder="Name" name="">
+						<input type="" class="form-control" id="" placeholder="Name" name="u_name">
 					</div>
 					<div class="form-group">
 						<label for="">Email:</label>
-						<input type="" class="form-control" id="" placeholder="Email" name="">
+						<input type="" class="form-control" id="" placeholder="Email" name="u_email">
 					</div>
                     <div class="form-group">
 						<label for="">Password:</label>
-						<input type="password" class="form-control" id="" placeholder="Enter Password" name="">
+						<input type="password" class="form-control" id="" placeholder="Enter Password" name="pass">
 					</div>
                     <div class="form-group">
 						<label for="">Confirm Password:</label>
-						<input type="password" class="form-control" id="" placeholder="Confirm Password" name="">
+						<input type="password" class="form-control" id="" placeholder="Confirm Password" name="pass2">
 					</div>
-                    <a class="btn btn-primary btn-lg" id="create-account-button" onclick="">Create Account</a>
+                    <button class="btn btn-primary btn-lg" id="create-account-button">Create Account</button>
                 </form>
             </div>
         </div>

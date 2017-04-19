@@ -9,6 +9,11 @@ $(document).ready(function () {
         document.getElementById("event-add-form").submit();
     });
 
+    // Create account button, add user to the userDB
+    $(document.body).on("click", "#create-account-button", function() {
+        document.getElementById("signup-form").submit();
+    });
+
     // see more events button
     $(document.body).on("click", "#see-more-events", function() {
         $("#events-div").empty();
