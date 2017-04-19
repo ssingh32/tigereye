@@ -11,7 +11,14 @@ $(document).ready(function () {
 
     // Create account button, add user to the userDB
     $(document.body).on("click", "#create-account-button", function() {
-        document.getElementById("signup-form").submit();
+        if(document.getElementById("signup-form").elements.item(2).value == document.getElementById("signup-form").elements.item(3).value) {
+            document.getElementById("signup-form").submit();
+        }
+        else {
+            var error = '<div class="alert alert-danger" id="password-error"><strong>Passwords did not match!<br></strong>Please re-enter your passwords</div>';
+            $('#signup-div').append(error);
+            return false;
+        }
     });
 
     // see more events button

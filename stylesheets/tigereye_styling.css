@@ -298,6 +298,19 @@ a:hover {
     padding-left: 20px;
 }
 
+#password-error {
+    width: 50%;
+    float: left;
+    margin-left: 54px;
+}
+
+.alert-danger {
+    border: 0px;
+    background-color: transparent ;
+    color: #e60000;
+    
+}
+
 /*.push {
     height: 50px;
 }
