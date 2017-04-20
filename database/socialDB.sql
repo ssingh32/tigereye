@@ -8,7 +8,7 @@ CREATE TABLE SocialAreas
 (
 UID 					INTEGER			ZEROFILL PRIMARY KEY AUTO_INCREMENT,
 Name					VARCHAR(17)		NOT NULL,
-Image                   BLOB            NOT NULL,
+Image                   TEXT            NOT NULL,
 Description				TEXT					,
 Location                TEXT            NOT NULL,
 Cost                    INTEGER         NOT NULL

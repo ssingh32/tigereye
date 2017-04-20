@@ -71,7 +71,7 @@ $(document).ready(function () {
             $.each(clubs, function (key, val) {
                 var row = '<div id="clubs" class="row">'
                 var club_start = '<div data-toggle="modal" data-target="#club-details' + counter + '"><div id="club" class="col-md-4">'
-                var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
+                var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="' + val.Image + '" class="img-responsive"></div>'
                 var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
                 var end_row = '</div></div>'
 
@@ -93,7 +93,7 @@ $(document).ready(function () {
             $.each(social, function (key, val) {
                 var row = '<div id="social-areas" class="row">'
                 var social_start = '<div data-toggle="modal" data-target="#social-details' + counter + '"><div id="social-area" class="col-md-4">'
-                var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
+                var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="' + val.Image + '" class="img-responsive"></div>'
                 var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
                 var end_row = '</div></div>'
 
@@ -212,7 +212,7 @@ function display_3_clubs() {
         $.each(clubs, function (key, val) {
             var row = '<div id="clubs" class="row">'
             var club_start = '<div data-toggle="modal" data-target="#club-details' + counter + '"><div id="club" class="col-md-4">'
-            var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
+            var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="' + val.Image + '" class="img-responsive"></div>'
             var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
             var end_row = '</div></div>'
 
@@ -236,7 +236,7 @@ function display_3_social() {
         $.each(social, function (key, val) {
             var row = '<div id="social-areas" class="row">'
             var social_start = '<div data-toggle="modal" data-target="#social-details' + counter + '"><div id="social-area" class="col-md-4">'
-            var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="../assets/blank_image.png" class="img-responsive"></div>'
+            var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="' + val.Image + '" class="img-responsive"></div>'
             var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
             var end_row = '</div></div>'
 
