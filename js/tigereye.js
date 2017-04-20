@@ -21,6 +21,21 @@ $(document).ready(function () {
         }
     });
 
+    // Sign in the user and initilize the session storage, if the response is good, sign in the user
+    $(document.body).on("click", "#login-button", function() {
+        $.post('../php/login.php', $('form').serializeArray(), function(response) {
+            console.log(JSON.parse(response));
+            if(JSON.parse(response)) {
+                sessionStorage.setItem("username", document.getElementById("login-form").elements.item(0).value);
+                window.location.replace("../pages/index.html");
+            }
+            else {
+                sign_in_error();
+                return false;
+            }
+        });
+    });
+
     // see more events button
     $(document.body).on("click", "#see-more-events", function() {
         $("#events-div").empty();
@@ -150,9 +165,10 @@ function sign_out() {
     location.reload();
 }
 
-// Sign in the user TODO
-function sign_in() {
-    pass;
+function sign_in_error() {
+    console.log("Error");
+    var error ='<div class="alert alert-danger fade in" id="password-error"><strong>User does not exist<br></strong>Please re-enter your information or create an account</div>';
+    $('#login-div').append(error);
 }
 
 // Timeout user at 3 mins

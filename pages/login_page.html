@@ -10,11 +10,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="../js/bootstrap.js"></script>
 		<script src="../js/tigereye.js"></script>
-
-        <!-- TODO finish google sign in stuff-->
-        <!--<meta name="google-signin-scope" content="profile email">
-        <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-        <script src="https://apis.google.com/js/platform.js" async defer></script>-->
 	</head>
     <body>
         <!-- navigation bar -->
@@ -38,16 +33,16 @@
             <!--login side-->
             <div id="login-div" class="container-fluid col-md-6">
                 <h1>Login</h1>
-                <form id="login-form" method="post">
+                <form action="" id="login-form" method="post">
 					<div class="form-group">
 						<label for="">Username:</label>
-						<input type="" class="form-control" id="" placeholder="Email" name="">
+						<input type="" class="form-control" id="" placeholder="Email" name="user_name">
 					</div>
                     <div class="form-group">
 						<label for="">Password:</label>
-						<input type="password" class="form-control" id="" placeholder="Enter Password" name="">
+						<input type="password" class="form-control" id="" placeholder="Enter Password" name="user_password">
 					</div>
-                    <a class="btn btn-primary btn-lg" id="login-button" onclick="">Login</a>
+                    <button class="btn btn-primary btn-lg" id="login-button" onclick="">Login</button>
                 </form>
             </div>
             <!--signup side-->
@@ -70,7 +65,7 @@
 						<label for="">Confirm Password:</label>
 						<input type="password" class="form-control" id="" placeholder="Confirm Password" name="pass2">
 					</div>
-                    <button class="btn btn-primary btn-lg" id="create-account-button">Create Account</button>
+                    <button class="btn btn-primary btn-lg" id="create-account-button" onclick="">Create Account</button>
                 </form>
             </div>
         </div>
