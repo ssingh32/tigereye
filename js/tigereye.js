@@ -52,7 +52,7 @@ $(document).ready(function () {
                     '</p><p>' + val.Cost + '</p></div>'
                 var end_row = '</div></div>'
 
-                var modal = '<div id="event-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+ val.Name +'</h4></div><div class="modal-body"><p>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
+                var modal = '<div id="event-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3 class="modal-title">'+ val.Name +'</h3></div><div class="modal-body"><img src="' + val.Image + '" class="img-responsive id="details-image"><br><p><strong>Description:</strong><br>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
 
 
                 // add the element to the events div
@@ -75,7 +75,7 @@ $(document).ready(function () {
                 var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
                 var end_row = '</div></div>'
 
-                var modal = '<div id="club-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+ val.Name +'</h4></div><div class="modal-body"><p>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
+                var modal = '<div id="club-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3 class="modal-title">'+ val.Name +'</h3></div><div class="modal-body"><img src="' + val.Image + '" class="img-responsive id="details-image"><br><p><strong>Description:</strong><br>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
 
                 // add the element to the clubs div
                 $('#clubs-div').append(club_start + image + club_info + modal);
@@ -97,7 +97,7 @@ $(document).ready(function () {
                 var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
                 var end_row = '</div></div>'
 
-                var modal = '<div id="social-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+ val.Name +'</h4></div><div class="modal-body"><p>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
+                var modal = '<div id="social-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3 class="modal-title">'+ val.Name +'</h3></div><div class="modal-body"><img src="' + val.Image + '" class="img-responsive id="details-image"><br><p><strong>Description:</strong><br>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
 
                 // add the element to the social areas div
                 $('#social-areas-div').append(social_start + image + social_info + modal);
@@ -191,7 +191,7 @@ function display_3_events() {
                 '</p><p>' + val.Cost + '</p></div>'
             var end_row = '</div></div>'
 
-            var modal = '<div id="event-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+ val.Name +'</h4></div><div class="modal-body"><p>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
+            var modal = '<div id="event-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3 class="modal-title">'+ val.Name +'</h3></div><div class="modal-body"><img src="' + val.Image + '" class="img-responsive id="details-image"><br><p><strong>Description:</strong><br>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
 
 
             // add the element to the events div
@@ -216,7 +216,7 @@ function display_3_clubs() {
             var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
             var end_row = '</div></div>'
 
-            var modal = '<div id="club-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+ val.Name +'</h4></div><div class="modal-body"><p>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
+            var modal = '<div id="club-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3 class="modal-title">'+ val.Name +'</h3></div><div class="modal-body"><img src="' + val.Image + '" class="img-responsive" id="details-image"><br><p><strong>Description:</strong><br>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
 
             // add the element to the clubs div
             $('#clubs-div').append(club_start + image + club_info + modal);
@@ -240,7 +240,7 @@ function display_3_social() {
             var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
             var end_row = '</div></div>'
 
-            var modal = '<div id="social-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+ val.Name +'</h4></div><div class="modal-body"><p>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
+            var modal = '<div id="social-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3 class="modal-title">'+ val.Name +'</h3></div><div class="modal-body"><img src="' + val.Image + '" class="img-responsive" id="details-image"><br><p><strong>Description:</strong><br>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
 
             // add the element to the social areas div
             $('#social-areas-div').append(social_start + image + social_info + modal);

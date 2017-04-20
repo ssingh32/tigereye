@@ -311,6 +311,28 @@ a:hover {
     
 }
 
+.modal-body {
+    display:block;
+    margin:auto;
+    height: 80%;
+    width: 80%;
+}
+
+.modal-header, .modal-footer {
+    background-color: #f7f7f7;
+}
+
+.modal-title {
+    text-align: center;
+}
+
+#details-image {
+    height: 50%;
+    width: 50%;
+    display:block;
+    margin:auto;
+}
+
 /*.push {
     height: 50px;
 }
