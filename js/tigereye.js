@@ -153,10 +153,12 @@ function not_logged_in_nav() {
 
 // generate the navbar when user is logged in
 function logged_in_nav() {
+    var welcome_user = '<li><p>Hello, '+ sessionStorage.getItem("username") +'</p></li>'
     var logout_button = '<li><a href="#" onclick="sign_out()">Signout <span class="glyphicon glyphicon-log-out"></span></a></li>'
     var add_event_button = '<button type="button" class="btn btn-primary btn-sm" id="modal-button" data-toggle="modal" data-target="#add-event-modal">Add Event <span class="glyphicon glyphicon-plus"></span></button>'
     $('#login').append(logout_button);
     $('#add-event').append(add_event_button);
+    $('#welcome').append(welcome_user);
 }
 
 // Sign out the user when the button is pressed and reloads the page

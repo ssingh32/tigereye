@@ -1,46 +1,47 @@
 <!doctype html>
 <html>
-	<head>
-	<title>TigerEye</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+    <title>TigerEye</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<link rel="stylesheet" href="../stylesheets/bootstrap.css"/>
-		<link rel="stylesheet" href="../stylesheets/tigereye_styling.css"/>
-		<link rel="shortcut icon" href=""/>
+        <link rel="stylesheet" href="../stylesheets/bootstrap.css"/>
+        <link rel="stylesheet" href="../stylesheets/tigereye_styling.css"/>
+        <link rel="shortcut icon" href=""/>
 
         <!-- Date time picker plugin, from http://eonasdan.github.io/bootstrap-datetimepicker/ -->
         <script type="text/javascript" src="../plugins/moment.min.js"></script>
         <script type="text/javascript" src="../plugins/bootstrap-datetimepicker.min.js"></script>
         <link rel="stylesheet" href="../plugins/bootstrap-datetimepicker.min.css"/>
-		
-		<script src="../js/bootstrap.js"></script>
-		<script src="../js/tigereye.js"></script>
-	</head>
+        
+        <script src="../js/bootstrap.js"></script>
+        <script src="../js/tigereye.js"></script>
+    </head>
     <body>
         <!-- navigation bar -->
-		<nav id="headerNav" class="navbar navbar-default navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a href ="index.html" id="headerNav" class="navbar-brand">TigerEye</a>
-					<button id="small-window-menu" class="navbar-toggle" data-toggle="collapse" data-target=".nav-data-collapsed" class="navbar-toggle collapsed">Menu <span class="caret"></span></button>
-				</div>
-				<div class="collapse navbar-collapse nav-data-collapsed" style="height:auto">
+        <nav id="headerNav" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href ="index.html" id="headerNav" class="navbar-brand">TigerEye</a>
+                    <button id="small-window-menu" class="navbar-toggle" data-toggle="collapse" data-target=".nav-data-collapsed" class="navbar-toggle collapsed">Menu <span class="caret"></span></button>
+                </div>
+                <div class="collapse navbar-collapse nav-data-collapsed" style="height:auto">
                     <!--TODO do this better so its not a workaround to get login to float all the way right first?-->
                     <!--Login/Signup-->
                     <ul id="login" class="nav navbar-nav"></ul>
+                    <ul id="welcome" class="nav navbar-nav"></ul>
                     <!--Search-->
                     <ul id="search" class="nav navbar-nav">
-						<button type="button" class="btn btn-primary btn-sm" id="search-button"><span class="glyphicon glyphicon-search"></span> Search</button>
+                        <button type="button" class="btn btn-primary btn-sm" id="search-button"><span class="glyphicon glyphicon-search"></span> Search</button>
                         <div class="form-group" id="search-form">
                             <input type="" class="form-control" id="" placeholder="" name="search">
-						</div>
-					</ul>
+                        </div>
+                    </ul>
                     <!-- add event button -->
                     <ul id="add-event" class="nav navbar-nav"></ul>
-				</div>
-			</div>
-		</nav>
+                </div>
+            </div>
+        </nav>
 
         <!--Start of main page-->
         <div id="page" class="container-fluid col-md-12">
