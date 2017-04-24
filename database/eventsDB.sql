@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS Events;
 CREATE TABLE Events
 (
 UID 					INTEGER			ZEROFILL PRIMARY KEY AUTO_INCREMENT,
-Name					VARCHAR(17)		NOT NULL,
+Name					VARCHAR(50)		NOT NULL,
 Image                   TEXT            NOT NULL,
 Location                TEXT            NOT NULL,
 EventStart              TEXT                    ,

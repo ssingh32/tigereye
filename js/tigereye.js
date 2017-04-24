@@ -49,7 +49,7 @@ $(document).ready(function () {
                     val.Name + '</p><p>' + val.Location +
                     '</p><p>' +
                     val.EventStart + '</p><p>' + val.EventEnd +
-                    '</p><p>' + val.Cost + '</p></div>'
+                    '</p><p>$' + val.Cost + '</p></div>'
                 var end_row = '</div></div>'
 
                 var modal = '<div id="event-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3 class="modal-title">'+ val.Name +'</h3></div><div class="modal-body"><img src="' + val.Image + '" class="img-responsive id="details-image"><br><p><strong>Description:</strong><br>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
@@ -72,7 +72,7 @@ $(document).ready(function () {
                 var row = '<div id="clubs" class="row">'
                 var club_start = '<div data-toggle="modal" data-target="#club-details' + counter + '"><div id="club" class="col-md-4">'
                 var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="' + val.Image + '" class="img-responsive"></div>'
-                var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
+                var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.Location + '</p><p>$' + val.Cost + '</p></div>'
                 var end_row = '</div></div>'
 
                 var modal = '<div id="club-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3 class="modal-title">'+ val.Name +'</h3></div><div class="modal-body"><img src="' + val.Image + '" class="img-responsive id="details-image"><br><p><strong>Description:</strong><br>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
@@ -94,7 +94,7 @@ $(document).ready(function () {
                 var row = '<div id="social-areas" class="row">'
                 var social_start = '<div data-toggle="modal" data-target="#social-details' + counter + '"><div id="social-area" class="col-md-4">'
                 var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="' + val.Image + '" class="img-responsive"></div>'
-                var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
+                var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.Location + '</p><p>$' + val.Cost + '</p></div>'
                 var end_row = '</div></div>'
 
                 var modal = '<div id="social-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3 class="modal-title">'+ val.Name +'</h3></div><div class="modal-body"><img src="' + val.Image + '" class="img-responsive id="details-image"><br><p><strong>Description:</strong><br>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
@@ -190,7 +190,7 @@ function display_3_events() {
                 val.Name + '</p><p>' + val.Location +
                 '</p><p>' +
                 val.EventStart + '</p><p>' + val.EventEnd +
-                '</p><p>' + val.Cost + '</p></div>'
+                '</p><p>$' + val.Cost + '</p></div>'
             var end_row = '</div></div>'
 
             var modal = '<div id="event-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3 class="modal-title">'+ val.Name +'</h3></div><div class="modal-body"><img src="' + val.Image + '" class="img-responsive id="details-image"><br><p><strong>Description:</strong><br>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
@@ -215,7 +215,7 @@ function display_3_clubs() {
             var row = '<div id="clubs" class="row">'
             var club_start = '<div data-toggle="modal" data-target="#club-details' + counter + '"><div id="club" class="col-md-4">'
             var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="' + val.Image + '" class="img-responsive"></div>'
-            var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
+            var club_info = '<div id="club-info-div" class="col-md-8"><p>' + val.Name + '</p><p>' + val.Location + '</p><p>$' + val.Cost + '</p></div>'
             var end_row = '</div></div>'
 
             var modal = '<div id="club-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3 class="modal-title">'+ val.Name +'</h3></div><div class="modal-body"><img src="' + val.Image + '" class="img-responsive" id="details-image"><br><p><strong>Description:</strong><br>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';
@@ -239,7 +239,7 @@ function display_3_social() {
             var row = '<div id="social-areas" class="row">'
             var social_start = '<div data-toggle="modal" data-target="#social-details' + counter + '"><div id="social-area" class="col-md-4">'
             var image = '<div id="image-div" class="col-md-4"><img id="event-image" src="' + val.Image + '" class="img-responsive"></div>'
-            var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.Location + '</p><p>' + val.Cost + '</p></div>'
+            var social_info = '<div id="social-info-div" class="col-md-8">' + val.Name + '</p><p>' + val.Location + '</p><p>$' + val.Cost + '</p></div>'
             var end_row = '</div></div>'
 
             var modal = '<div id="social-details' + counter + '"class="modal fade" role="dialog" data-backdrop="false"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h3 class="modal-title">'+ val.Name +'</h3></div><div class="modal-body"><img src="' + val.Image + '" class="img-responsive" id="details-image"><br><p><strong>Description:</strong><br>'+ val.Description +'</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>';

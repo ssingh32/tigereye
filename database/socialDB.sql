@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS SocialAreas;
 CREATE TABLE SocialAreas
 (
 UID 					INTEGER			ZEROFILL PRIMARY KEY AUTO_INCREMENT,
-Name					VARCHAR(17)		NOT NULL,
+Name					VARCHAR(50)		NOT NULL,
 Image                   TEXT            NOT NULL,
 Description				TEXT					,
 Location                TEXT            NOT NULL,
