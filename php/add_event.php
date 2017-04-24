@@ -16,7 +16,6 @@ if(isset($_POST['name'])
     && !empty($_POST['location'])
     && !empty($_POST['start'])
     && !empty($_POST['end'])
-    && !empty($_POST['cost'])
     && !empty($_POST['description'])
 ){
 
