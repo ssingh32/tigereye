@@ -32,10 +32,10 @@
                     <ul id="welcome" class="nav navbar-nav"></ul>
                     <!--Search-->
                     <ul id="search" class="nav navbar-nav">
-                        <button type="button" class="btn btn-primary btn-sm" id="search-button"><span class="glyphicon glyphicon-search"></span> Search</button>
-                        <div class="form-group" id="search-form">
-                            <input type="" class="form-control" id="" placeholder="" name="search">
-                        </div>
+                        <button type="button" class="btn btn-primary btn-sm" id="search-button" data-toggle="modal" data-target="#search-results-modal"><span class="glyphicon glyphicon-search"></span> Search</button>
+                        <form class="form-group" id="search-form">
+                            <input action="../php/search.php" method="post" type="text" class="form-control" id="" placeholder="" name="search_term"/>
+                        </form>
                     </ul>
                     <!-- add event button -->
                     <ul id="add-event" class="nav navbar-nav"></ul>
@@ -46,6 +46,24 @@
         <!--Start of main page-->
         <div id="page" class="container-fluid col-md-12">
             
+<!-- Search Results Modal -->
+            <div id="search-results-modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h2>Search Results</h2>
+                            </div>
+                            <div class="modal-body" id="search-results">
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+
             <!-- Modal -->
             <div id="add-event-modal" class="modal fade" role="dialog">
                 <div class="modal-dialog">

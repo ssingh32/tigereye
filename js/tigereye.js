@@ -8,6 +8,35 @@ $(document).ready(function () {
         document.getElementById("event-add-form").submit();
     });
 
+    // posts the data for the search feature
+    $(document.body).on("click", "#search-button", function() {
+        $("#search-results").empty();
+        $.post('../php/search.php', $('form').serializeArray(), function(response) {
+            var counter = 0;
+            if (!jQuery.isEmptyObject(response)){
+                $.each(response, function (key, val) {
+                var row = '<div id="events-sr" class="row">'
+                var event_start = '<div id="event-sr" class="col-md-12">'
+                var image = '<div id="image-div-sr" class="col-md-4"><img id="event-image" src="' + val.Image + '" class="img-responsive"></div>'
+                var event_info = '<div id="event-info-div-sr" class="col-md-8"><p>' +
+                    val.Name + '</p><p>' + val.Location +
+                    '</p><p>' +
+                    val.EventStart + '</p><p>' + val.EventEnd +
+                    '</p><p>$' + val.Cost + '</p></div>'
+                var end_row = '</div></div>'
+
+                // add the element to the events div
+                $('#search-results').append(event_start + image + event_info);
+                counter++;
+            });
+            }
+            else {
+                var empty = '<h3>No Matching Events</h3>'
+                $('#search-results').append(empty);
+            }
+        });
+    });
+
     // Create account button, add user to the userDB
     $(document.body).on("click", "#create-account-button", function() {
         if(document.getElementById("signup-form").elements.item(2).value == document.getElementById("signup-form").elements.item(3).value) {

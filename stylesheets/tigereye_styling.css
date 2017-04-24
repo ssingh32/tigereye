@@ -192,6 +192,34 @@ body {
     border: none;
 }
 
+/* Search results styling */
+#events-div-sr{
+    border-bottom: 3px solid #e6e6e6;
+    width: 100%;
+    height: auto;
+    min-height: 33%;
+    padding-bottom: 25px;
+}
+
+#event-sr{
+    height: 100%;
+    padding: 0px;
+} 
+
+#event-info-div-sr {
+    height: 100%;
+    font-size: 12px;
+    padding-top: 10%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+#event-image-sr {
+    padding-top: 50%;
+    padding-bottom: 50%;
+}
+
 /* Styles for the Events to be displayed */
 #events-div{
     border-bottom: 3px solid #e6e6e6;
